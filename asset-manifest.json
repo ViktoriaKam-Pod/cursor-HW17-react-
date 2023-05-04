@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cursor-HW17-react-/static/css/main.5ea6e054.css",
+    "main.js": "/cursor-HW17-react-/static/js/main.47c9c5c4.js",
+    "index.html": "/cursor-HW17-react-/index.html",
+    "main.5ea6e054.css.map": "/cursor-HW17-react-/static/css/main.5ea6e054.css.map",
+    "main.47c9c5c4.js.map": "/cursor-HW17-react-/static/js/main.47c9c5c4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ea6e054.css",
+    "static/js/main.47c9c5c4.js"
+  ]
+}
