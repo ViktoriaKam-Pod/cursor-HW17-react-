@@ -12,7 +12,7 @@ body{
 }
 .card{
     width: clamp(300px, 60vh, 600px);
-    border-top: 3px rgba(175, 111, 111, 0.418) ridge;
+    border-top: 3px rgba(175, 111, 111, 0.459) ridge;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     align-items: center;
     display: flex;

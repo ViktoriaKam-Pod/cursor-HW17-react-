@@ -31,7 +31,7 @@ function Contacts(){
 
         return(
             <Fragment>
-                <input className='search' placeholder='Введіть прізвище' value={search} 
+                <input className='search' placeholder='🔍 Пошук' value={search} 
                 onChange={(event) => setSearch(event.target.value)}/>
                 <div className="main-card">
                     {element}
