@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import React, { Fragment } from "react";
+import { useState } from "react";
+import contactsAll from "./contact"
+
+
+function Contact(props){
+    return(
+        <div className="card">
+            <p>Прізвище: {props.lastName}</p>
+            <p>Ім'я: {props.firstName}</p>
+            <p>Номер телефону: {props.phone}</p>
+        </div>
+    )
 }
 
-export default App;
+function Contacts(){
+    const [search, setSearch] = useState("");
+
+    const handleSearchChange = contactsAll.filter(el => {
+        return el.lastName.includes(search)
+    })
+
+    let element=[];
+    handleSearchChange.forEach((elem,i) => {
+        element.push(
+            <Contact firstName={elem.firstName} lastName={elem.lastName} phone={elem.phone} key={i} />
+        )
+    });
+
+        return(
+            <Fragment>
+                <input className='search' placeholder='Введіть прізвище' value={search} 
+                onChange={(event) => setSearch(event.target.value)}/>
+                <div className="main-card">
+                    {element}
+                </div>
+            </Fragment>
+        )
+}
+    export default Contacts
